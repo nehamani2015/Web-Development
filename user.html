@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+    function Validate() {
+        var password = document.getElementById("txtPassword").value;
+        var confirmPassword = document.getElementById("txtConfirmPassword").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
+</script>
+
+
+</head>
+<body >
+ <form method="post" action="registration.php" style="border-style:solid; background-color:MediumSeaGreen  ; height:10cm; width:15cm; margin-left:9cm;  margin-top:5em;">
+<table  width='480px' cellpadding='0' cellspacing='0' align='center'>
+<tr>
+   <td><h1 style="text-decoration:underline;">Registration Form</h1></td>
+</tr>
+ 
+<table border='0' width='480px' cellpadding='0' cellspacing='0' align='center'>
+<tr>
+    <td align='center'>Name:</td>
+    <td><!--<input type='text' name='name' required/>-->
+	<input type="text" name="t1" id="name" size="15" placeholder="Full Name" required autofocus</td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+    <td align='center'>Password:</td>
+    <td><input type='password' name='t2' id="txtPassword" required autofocus></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+    <td align='center'>Confirm Password:</td>
+    <td><input type='password' name='t3' id="txtConfirmPassword"></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+    <td align='center'>Email:</td>
+    <td><input type='email' name='t4'></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+    <td align='center'>Mobile No:</td>
+    <td><input type='number' name='m1'></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<table border='0' cellpadding='0' cellspacing='0' width='480px' align='center'>
+<tr>
+    <td align="center"><input type='submit' name='REGISTER' value="submit"   onclick="return Validate()">&nbsp;&nbsp;
+	<input type='reset' name='reset' value="reset"></td>
+</tr>
+</table>
+</table>
+ 
+</table>
+</form>
+</body>
+</html>
